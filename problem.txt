@@ -1,0 +1,18 @@
+1. void insert_splits(const NetParameter& param, NetParameter* param_split);// function?
+
+parameters of proto files
+the mean of stride and group
+the way to use pad, cropsize and mirror
+
+pre-trained models
+
+im2col
+
+版本控制系统 SVN Git
+latex
+markdown
+
+java
+python
+
+怎么样安排我后面的工作？学术发论文、找工作

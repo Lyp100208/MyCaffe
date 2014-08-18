@@ -1,0 +1,275 @@
+train_net.cpp:26] Starting Optimization
+solver.cpp:25] nicta_train.prototxt
+solver.cpp:27] Creating training net.
+net.cpp:46] input size 0
+net.cpp:69] layers_size = 9
+net.cpp:76] Creating Layer nicta
+net.cpp:79] layer_connection.bottom_size() = 0
+net.cpp:95] layer_connection.top_size() = 2
+net.cpp:114] nicta -> data
+net.cpp:114] nicta -> label
+net.cpp:126] Setting up nicta
+data_layer.cpp:141] Opening leveldb nicta-train-leveldb
+data_layer.cpp:172] a
+blob.cpp:16] Reshape
+data_layer.cpp:176] b
+blob.cpp:16] Reshape
+data_layer.cpp:180] c
+data_layer.cpp:182] output data size: 64,1,80,96
+blob.cpp:16] Reshape
+blob.cpp:16] Reshape
+blob.cpp:16] Reshape
+data_layer.cpp:214] prefetch_data_->mutable_cpu_data();
+net.cpp:128] top_vecs_[i].size() = 2
+net.cpp:130] Top shape: 64 1 80 96 (491520)
+net.cpp:130] Top shape: 64 1 1 1 (64)
+net.cpp:161] nicta does not need backward computation.
+net.cpp:76] Creating Layer conv1
+net.cpp:79] layer_connection.bottom_size() = 1
+net.cpp:87] conv1 <- data
+net.cpp:95] layer_connection.top_size() = 1
+net.cpp:114] conv1 -> conv1
+net.cpp:126] Setting up conv1
+blob.cpp:16] Reshape
+data_layer.cpp:22] DataLayerPrefetch
+blob.cpp:16] Reshape
+blob.cpp:16] Reshape
+blob.cpp:16] Reshape
+net.cpp:128] top_vecs_[i].size() = 1
+net.cpp:130] Top shape: 64 20 76 92 (8949760)
+net.cpp:156] conv1 needs backward computation.
+net.cpp:76] Creating Layer pool1
+net.cpp:79] layer_connection.bottom_size() = 1
+net.cpp:87] pool1 <- conv1
+net.cpp:95] layer_connection.top_size() = 1
+net.cpp:114] pool1 -> pool1
+net.cpp:126] Setting up pool1
+blob.cpp:16] Reshape
+net.cpp:128] top_vecs_[i].size() = 1
+net.cpp:130] Top shape: 64 20 38 46 (2237440)
+net.cpp:156] pool1 needs backward computation.
+net.cpp:76] Creating Layer conv2
+net.cpp:79] layer_connection.bottom_size() = 1
+net.cpp:87] conv2 <- pool1
+net.cpp:95] layer_connection.top_size() = 1
+net.cpp:114] conv2 -> conv2
+net.cpp:126] Setting up conv2
+blob.cpp:16] Reshape
+blob.cpp:16] Reshape
+blob.cpp:16] Reshape
+blob.cpp:16] Reshape
+net.cpp:128] top_vecs_[i].size() = 1
+net.cpp:130] Top shape: 64 50 34 42 (4569600)
+net.cpp:156] conv2 needs backward computation.
+net.cpp:76] Creating Layer pool2
+net.cpp:79] layer_connection.bottom_size() = 1
+net.cpp:87] pool2 <- conv2
+net.cpp:95] layer_connection.top_size() = 1
+net.cpp:114] pool2 -> pool2
+net.cpp:126] Setting up pool2
+blob.cpp:16] Reshape
+net.cpp:128] top_vecs_[i].size() = 1
+net.cpp:130] Top shape: 64 50 17 21 (1142400)
+net.cpp:156] pool2 needs backward computation.
+net.cpp:76] Creating Layer ip1
+net.cpp:79] layer_connection.bottom_size() = 1
+net.cpp:87] ip1 <- pool2
+net.cpp:95] layer_connection.top_size() = 1
+net.cpp:114] ip1 -> ip1
+net.cpp:126] Setting up ip1
+blob.cpp:16] Reshape
+blob.cpp:16] Reshape
+blob.cpp:16] Reshape
+net.cpp:128] top_vecs_[i].size() = 1
+net.cpp:130] Top shape: 64 500 1 1 (32000)
+net.cpp:156] ip1 needs backward computation.
+net.cpp:76] Creating Layer relu1
+net.cpp:79] layer_connection.bottom_size() = 1
+net.cpp:87] relu1 <- ip1
+net.cpp:95] layer_connection.top_size() = 1
+net.cpp:102] relu1 -> ip1 (in-place)
+net.cpp:126] Setting up relu1
+net.cpp:128] top_vecs_[i].size() = 1
+net.cpp:130] Top shape: 64 500 1 1 (32000)
+net.cpp:156] relu1 needs backward computation.
+net.cpp:76] Creating Layer ip2
+net.cpp:79] layer_connection.bottom_size() = 1
+net.cpp:87] ip2 <- ip1
+net.cpp:95] layer_connection.top_size() = 1
+net.cpp:114] ip2 -> ip2
+net.cpp:126] Setting up ip2
+blob.cpp:16] Reshape
+blob.cpp:16] Reshape
+blob.cpp:16] Reshape
+net.cpp:128] top_vecs_[i].size() = 1
+net.cpp:130] Top shape: 64 2 1 1 (128)
+net.cpp:156] ip2 needs backward computation.
+net.cpp:76] Creating Layer loss
+net.cpp:79] layer_connection.bottom_size() = 2
+net.cpp:87] loss <- ip2
+net.cpp:87] loss <- label
+net.cpp:95] layer_connection.top_size() = 0
+net.cpp:126] Setting up loss
+blob.cpp:16] Reshape
+blob.cpp:16] Reshape
+blob.cpp:16] Reshape
+net.cpp:128] top_vecs_[i].size() = 0
+net.cpp:156] loss needs backward computation.
+net.cpp:178] Collecting Learning Rate and Weight Decay.
+net.cpp:171] Network initialization done.
+net.cpp:172] Memory required for Data 69691648
+solver.cpp:30] Creating testing net.
+net.cpp:46] input size 0
+net.cpp:69] layers_size = 10
+net.cpp:76] Creating Layer nicta
+net.cpp:79] layer_connection.bottom_size() = 0
+net.cpp:95] layer_connection.top_size() = 2
+net.cpp:114] nicta -> data
+net.cpp:114] nicta -> label
+net.cpp:126] Setting up nicta
+data_layer.cpp:141] Opening leveldb nicta-test-leveldb
+data_layer.cpp:172] a
+blob.cpp:16] Reshape
+data_layer.cpp:176] b
+blob.cpp:16] Reshape
+data_layer.cpp:180] c
+data_layer.cpp:182] output data size: 100,1,80,96
+blob.cpp:16] Reshape
+blob.cpp:16] Reshape
+blob.cpp:16] Reshape
+data_layer.cpp:214] prefetch_data_->mutable_cpu_data();
+net.cpp:128] top_vecs_[i].size() = 2
+net.cpp:130] Top shape: 100 1 80 96 (768000)
+net.cpp:130] Top shape: 100 1 1 1 (100)
+I0330 15:02:17.522116  8576 data_layer.cpp:22] DataLayerPrefetch
+net.cpp:161] nicta does not need backward computation.
+net.cpp:76] Creating Layer conv1
+net.cpp:79] layer_connection.bottom_size() = 1
+net.cpp:87] conv1 <- data
+net.cpp:95] layer_connection.top_size() = 1
+net.cpp:114] conv1 -> conv1
+net.cpp:126] Setting up conv1
+blob.cpp:16] Reshape
+blob.cpp:16] Reshape
+blob.cpp:16] Reshape
+blob.cpp:16] Reshape
+net.cpp:128] top_vecs_[i].size() = 1
+net.cpp:130] Top shape: 100 20 76 92 (13984000)
+net.cpp:156] conv1 needs backward computation.
+net.cpp:76] Creating Layer pool1
+net.cpp:79] layer_connection.bottom_size() = 1
+net.cpp:87] pool1 <- conv1
+net.cpp:95] layer_connection.top_size() = 1
+net.cpp:114] pool1 -> pool1
+net.cpp:126] Setting up pool1
+blob.cpp:16] Reshape
+net.cpp:128] top_vecs_[i].size() = 1
+net.cpp:130] Top shape: 100 20 38 46 (3496000)
+net.cpp:156] pool1 needs backward computation.
+net.cpp:76] Creating Layer conv2
+net.cpp:79] layer_connection.bottom_size() = 1
+net.cpp:87] conv2 <- pool1
+net.cpp:95] layer_connection.top_size() = 1
+net.cpp:114] conv2 -> conv2
+net.cpp:126] Setting up conv2
+blob.cpp:16] Reshape
+blob.cpp:16] Reshape
+blob.cpp:16] Reshape
+blob.cpp:16] Reshape
+net.cpp:128] top_vecs_[i].size() = 1
+net.cpp:130] Top shape: 100 50 34 42 (7140000)
+net.cpp:156] conv2 needs backward computation.
+net.cpp:76] Creating Layer pool2
+net.cpp:79] layer_connection.bottom_size() = 1
+net.cpp:87] pool2 <- conv2
+net.cpp:95] layer_connection.top_size() = 1
+net.cpp:114] pool2 -> pool2
+net.cpp:126] Setting up pool2
+blob.cpp:16] Reshape
+net.cpp:128] top_vecs_[i].size() = 1
+net.cpp:130] Top shape: 100 50 17 21 (1785000)
+net.cpp:156] pool2 needs backward computation.
+net.cpp:76] Creating Layer ip1
+net.cpp:79] layer_connection.bottom_size() = 1
+net.cpp:87] ip1 <- pool2
+net.cpp:95] layer_connection.top_size() = 1
+net.cpp:114] ip1 -> ip1
+net.cpp:126] Setting up ip1
+blob.cpp:16] Reshape
+blob.cpp:16] Reshape
+blob.cpp:16] Reshape
+net.cpp:128] top_vecs_[i].size() = 1
+net.cpp:130] Top shape: 100 500 1 1 (50000)
+net.cpp:156] ip1 needs backward computation.
+net.cpp:76] Creating Layer relu1
+net.cpp:79] layer_connection.bottom_size() = 1
+net.cpp:87] relu1 <- ip1
+net.cpp:95] layer_connection.top_size() = 1
+net.cpp:102] relu1 -> ip1 (in-place)
+net.cpp:126] Setting up relu1
+net.cpp:128] top_vecs_[i].size() = 1
+net.cpp:130] Top shape: 100 500 1 1 (50000)
+net.cpp:156] relu1 needs backward computation.
+net.cpp:76] Creating Layer ip2
+net.cpp:79] layer_connection.bottom_size() = 1
+net.cpp:87] ip2 <- ip1
+net.cpp:95] layer_connection.top_size() = 1
+net.cpp:114] ip2 -> ip2
+net.cpp:126] Setting up ip2
+blob.cpp:16] Reshape
+blob.cpp:16] Reshape
+blob.cpp:16] Reshape
+net.cpp:128] top_vecs_[i].size() = 1
+net.cpp:130] Top shape: 100 2 1 1 (200)
+net.cpp:156] ip2 needs backward computation.
+net.cpp:76] Creating Layer prob
+net.cpp:79] layer_connection.bottom_size() = 1
+net.cpp:87] prob <- ip2
+net.cpp:95] layer_connection.top_size() = 1
+net.cpp:114] prob -> prob
+net.cpp:126] Setting up prob
+blob.cpp:16] Reshape
+blob.cpp:16] Reshape
+blob.cpp:16] Reshape
+net.cpp:128] top_vecs_[i].size() = 1
+net.cpp:130] Top shape: 100 2 1 1 (200)
+net.cpp:156] prob needs backward computation.
+net.cpp:76] Creating Layer accuracy
+net.cpp:79] layer_connection.bottom_size() = 2
+net.cpp:87] accuracy <- prob
+net.cpp:87] accuracy <- label
+net.cpp:95] layer_connection.top_size() = 1
+net.cpp:114] accuracy -> accuracy
+net.cpp:126] Setting up accuracy
+blob.cpp:16] Reshape
+net.cpp:128] top_vecs_[i].size() = 1
+net.cpp:130] Top shape: 1 2 1 1 (2)
+net.cpp:156] accuracy needs backward computation.
+net.cpp:167] This network produces output accuracy
+net.cpp:178] Collecting Learning Rate and Weight Decay.
+net.cpp:171] Network initialization done.
+net.cpp:172] Memory required for Data 108894008
+solver.cpp:37] Solver scaffolding done.
+solver.cpp:48] Solving LeNet
+solver.cpp:192] net_params.size() = 8
+solver.cpp:195] net_param->num() = 20
+blob.cpp:16] Reshape
+solver.cpp:195] net_param->num() = 1
+blob.cpp:16] Reshape
+solver.cpp:195] net_param->num() = 50
+blob.cpp:16] Reshape
+solver.cpp:195] net_param->num() = 1
+blob.cpp:16] Reshape
+solver.cpp:195] net_param->num() = 1
+blob.cpp:16] Reshape
+solver.cpp:195] net_param->num() = 1
+blob.cpp:16] Reshape
+solver.cpp:195] net_param->num() = 1
+blob.cpp:16] Reshape
+solver.cpp:195] net_param->num() = 1
+blob.cpp:16] Reshape
+net.cpp:228] bottom.size() = 0
+net.cpp:216] layers_.size() = 9
+layer.hpp:94] Forward : data
+data_layer.cu:21] Come Here
+
