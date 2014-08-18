@@ -1,0 +1,27 @@
+# The training protocol buffer definition
+train_net: "SED_point_train.prototxt"
+# The testing protocol buffer definition
+test_net: "SED_point_test.prototxt"
+# test_iter specifies how many forward passes the test should carry out.
+test_iter: 29
+# Carry out testing every 1000 training iterations.
+test_interval: 1000
+# The base learning rate, momentum and the weight decay of the network.
+base_lr: 0.001
+momentum: 0.9
+weight_decay: 0.004
+# The learning rate policy
+# lr_policy: "fixed"
+lr_policy: "step"
+gamma: 0.9
+stepsize: 2000
+# Display every 400 iterations
+display: 400
+# The maximum number of iterations
+max_iter: 200000
+# snapshot intermediate results
+snapshot: 1000
+snapshot_prefix: "SED_point_quick"
+# solver mode: 0 for CPU and 1 for GPU
+solver_mode: 1
+

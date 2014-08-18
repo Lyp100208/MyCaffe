@@ -1,0 +1,6 @@
+/media/chenqi/9C8E5B678E5B38CA/VideoEval09/CAM2/MCTTR0202a.mov.deint.mpeg 2
+/media/chenqi/9C8E5B678E5B38CA/VideoEval09/CAM2/MCTTR0202b.mov.deint.mpeg 2
+/media/chenqi/9C8E5B678E5B38CA/VideoEval09/CAM2/MCTTR0202c.mov.deint.mpeg 2
+/media/chenqi/9C8E5B678E5B38CA/VideoEval09/CAM2/MCTTR0202d.mov.deint.mpeg 2
+/media/chenqi/9C8E5B678E5B38CA/VideoEval09/CAM2/MCTTR0702f.mov.deint.mpeg 2
+/media/chenqi/9C8E5B678E5B38CA/VideoEval09/CAM2/MCTTR0702g.mov.deint.mpeg 2

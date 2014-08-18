@@ -1,0 +1,9 @@
+/home/chenqi/download/llb_video/LGW_20071123_E1_CAM1.03.avi 1
+/home/chenqi/download/llb_video/LGW_20071123_E1_CAM1.11.avi 1
+/home/chenqi/download/llb_video/LGW_20071123_E1_CAM1.12.avi 1
+/home/chenqi/download/llb_video/LGW_20071123_E1_CAM3.03.avi 3
+/home/chenqi/download/llb_video/LGW_20071123_E1_CAM3.11.avi 3
+/home/chenqi/download/llb_video/LGW_20071123_E1_CAM3.12.avi 3
+/home/chenqi/download/llb_video/LGW_20071123_E1_CAM5.03.avi 5
+/home/chenqi/download/llb_video/LGW_20071123_E1_CAM5.11.avi 5
+/home/chenqi/download/llb_video/LGW_20071123_E1_CAM5.12.avi 5

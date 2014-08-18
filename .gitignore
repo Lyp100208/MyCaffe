@@ -7,6 +7,7 @@
 *.zip
 
 # leveldb
+*.sst
 examples/Pointing/pointing-test-leveldb/*
 examples/Pointing/pointing-train-leveldb/*
 examples/Embrace/embrace-train-leveldb/*
