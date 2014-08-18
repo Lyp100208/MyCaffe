@@ -1,5 +1,27 @@
 ## General
 
+# temp result
+*.data_point
+*.feature
+*.data
+*.zip
+
+# leveldb
+examples/Pointing/pointing-test-leveldb/*
+examples/Pointing/pointing-train-leveldb/*
+examples/Embrace/embrace-train-leveldb/*
+examples/Embrace/embrace-test-leveldb/*
+examples/SED_FULL/sed_full-test-leveldb/*
+examples/SED_FULL/sed_full-test-leveldb-crop/*
+examples/SED_FULL/sed_full-train-leveldb/*
+examples/SED_FULL/sed_full-train-leveldb-crop/*
+examples/SED_HS/sed_hs-test-leveldb/*
+examples/SED_HS/sed_hs-test-leveldb_gray/*
+examples/SED_HS/sed_hs-train-leveldb/*
+examples/SED_HS/sed_hs-train-leveldb_gray/*
+examples/SED_MHS/sed_hs-test-leveldb/*
+examples/SED_MHS/sed_hs-train-leveldb/*
+
 # Compiled Object files
 *.slo
 *.lo
@@ -52,7 +74,7 @@ Makefile.config
 # 2. custom, and live on their own unless they're deliberated contributed
 models/*
 data/*
-examples/*
+#examples/*
 
 # Don't version the generated documentation
 docs/_site
